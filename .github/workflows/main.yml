@@ -20,7 +20,7 @@ jobs:
             
             
       - name : cd code
-        run: cd ./bbq-deploy-front/bbq-fore/
+        run: cd bbq-fore
         
       - name: install deps
         run: npm install
