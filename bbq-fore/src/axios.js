@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 
-axios.defaults.baseURL = "http://localhost:8888"
+axios.defaults.baseURL = "http://43.159.34.72:8888"
 
 // pre filter
 axios.interceptors.request.use(config => {
