@@ -36,7 +36,7 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           port: 22
-          source: "bbq-fore/dist/"
+          source: "bbq-fore/"
           target: "/root"
           
       - name: deploy fore
@@ -46,8 +46,8 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           script: |
-            cp -r /root/dist /root/nginx
-            rm -rf /root/dist
+            cp -r /root/bbq-fore/dist /root/nginx
+            rm -rf /root/bbq-fore/dist
             rm -rf /root/nginx/html
             cd /root/nginx/
             mv dist html
