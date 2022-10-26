@@ -36,8 +36,8 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           port: 22
-          source: "/bbq-fore/"
-          target: "/root/"
+          source: "/bbq-fore/dist"
+          target: "/root"
           
       - name: deploy fore
         uses: appleboy/ssh-action@master
