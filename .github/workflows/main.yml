@@ -36,5 +36,5 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           port: 22
-          source: "/"
+          source: "bbq-fore/"
           target: "/root"
