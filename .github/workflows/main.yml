@@ -18,6 +18,10 @@ jobs:
         with: 
             node-version: "14.X"
             
+            
+      - name : cd code
+        run: cd /bbq-fore
+        
       - name: install deps
         run: npm install
         
