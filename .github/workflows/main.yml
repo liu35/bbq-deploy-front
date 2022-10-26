@@ -19,14 +19,16 @@ jobs:
             node-version: "14.X"
             
             
-      - name : cd code
-        run: cd bbq-fore
         
       - name: install deps
-        run: npm install
+        run:
+          cd bbq-fore
+          npm install
         
       - name: build app
-        run: npm run build
+        run: 
+          cd bbq-fore
+          npm run build
         
       - name: copy dist file with scp
         uses: appleboy/scp-action@master
