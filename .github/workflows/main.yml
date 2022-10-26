@@ -17,17 +17,16 @@ jobs:
         uses: actions/setup-node@v2.5.1
         with: 
             node-version: "14.X"
-            
-            
-      - run:
-          cd bbq-fore
+                
         
       - name: install deps
-        run:
+        run: |
+          cd bbq-fore
           npm install
         
       - name: build app
-        run: 
+        run: |
+          cd bbq-fore
           npm run build
         
       - name: copy dist file with scp
