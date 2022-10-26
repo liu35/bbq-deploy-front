@@ -36,7 +36,7 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           port: 22
-          source: "/bbq-fore/dist"
+          source: "bbq-fore"
           target: "/root"
           
       - name: deploy fore
