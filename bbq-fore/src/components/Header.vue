@@ -51,7 +51,7 @@
 
           <template slot="title">USER CENTER</template>
           <el-menu-item index="4-1" @click="getUserInfo">
-            USER INFO
+            USER INFO1111111111
           </el-menu-item>
         </el-submenu>
 
