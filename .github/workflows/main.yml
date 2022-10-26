@@ -36,5 +36,20 @@ jobs:
           username: root
           password: ${{secrets.PASSWORD}}
           port: 22
-          source: "bbq-fore/"
+          source: "bbq-fore/dist/"
           target: "/root"
+          
+      - name: deploy fore
+        uses: appleboy/ssh-action@master
+        with: 
+          host: ${{secrets.HOST}}
+          username: root
+          password: ${{secrets.PASSWORD}}
+          script: |
+            cp -r /root/dist /root/nginx
+            rm -rf /root/dist
+            rm -rf /root/nginx/html
+            cd /root/nginx/
+            mv dist html
+            cd /home/docker/
+            docker-compose restart nginx
