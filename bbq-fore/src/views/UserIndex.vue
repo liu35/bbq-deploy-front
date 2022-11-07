@@ -41,7 +41,7 @@
             <template slot="label">
               <i class="el-icon-male"></i>
               <i class="el-icon-female"></i>
-              sex
+              gender
             </template>
             <el-tag size="small">{{ this.sex }}</el-tag>
           </el-descriptions-item>
