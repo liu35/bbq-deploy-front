@@ -87,12 +87,21 @@ export default {
   },
   created() {
     this.getTypeList();
-    if (this.$store.getters.getUser.username) {
-      this.user.username = this.$store.getters.getUser.username
-      this.hasLogin = true
-      if (this.$store.getters.getUser.role == "ADMIN") {
-        this.isAdmin = true
-      }
+    if (this.$store.getters.getUser == null) {
+      MessageBox.alert("please login!", 'notice', {
+        confirmButtonText: 'ok',
+        callback: action => {
+          this.$router.push("/login")
+        }
+      })
+
+    }else if (this.$store.getters.getUser.role != "ADMIN") {
+      MessageBox.alert("you are not admin", 'notice', {
+        confirmButtonText: 'ok',
+        callback: action => {
+          this.$router.push({name : 'PostsIndex'})
+        }
+      })
 
     }
 
