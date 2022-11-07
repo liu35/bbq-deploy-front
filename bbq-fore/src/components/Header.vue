@@ -54,16 +54,16 @@
             USER INFO
           </el-menu-item>
           <el-menu-item index="4-2" @click="getFansList">
-            FANS LIST
+            FOLLOWERS
           </el-menu-item>
           <el-menu-item index="4-3" @click="getFollowList">
-            FOLLOW LIST
+            FOLLOWING
           </el-menu-item>
           <el-menu-item index="4-4" @click="getComments">
             MY COMMENTS
           </el-menu-item>
           <el-menu-item index="4-5" @click="getApprovalPosts">
-            APPROVAL ARTICLES
+            LIKED POSTS
           </el-menu-item>
         </el-submenu>
 
